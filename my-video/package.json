@@ -1,0 +1,40 @@
+{
+  "name": "my-video",
+  "version": "1.0.0",
+  "description": "My Remotion video",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/bundler": "^4.0.217",
+    "@remotion/cli": "4.0.217",
+    "@remotion/gif": "^4.0.217",
+    "@remotion/tailwind": "4.0.217",
+    "@remotion/zod-types": "4.0.217",
+    "autoprefixer": "^10.4.20",
+    "express": "^4.21.0",
+    "postcss": "^8.4.47",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.217",
+    "tailwindcss": "^3.4.13",
+    "zod": "3.22.3"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config": "4.0.217",
+    "@types/react": "18.3.1",
+    "@types/web": "0.0.166",
+    "eslint": "8.56.0",
+    "prettier": "3.3.3",
+    "typescript": "5.6.2"
+  },
+  "scripts": {
+    "start": "remotion studio",
+    "build": "remotion render HelloWorld out/video.mp4",
+    "upgrade": "remotion upgrade",
+    "test": "eslint src --ext ts,tsx,js,jsx && tsc"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
