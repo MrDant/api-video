@@ -12,15 +12,20 @@ app.get("/", (req, res) => {
   res.json(req.body);
 });
 
-app.get("/render", async (req, res) => {
+app.post("/render", async (req, res) => {
   const { compositionId = "Intro", text = "Je suis un texte par défaut !" } =
     req.body;
   // The composition you want to render
-
+  console.log(text, req.body, Object.keys(req));
   const options = {
     codec: "h264",
     chromiumOptions: {
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-gpu",
+        "--headless",
+      ],
     },
   };
   try {
